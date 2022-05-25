@@ -1,6 +1,241 @@
 @import "./1_utils/variables";
 @import "./3_base/base";
 
-.bloc {
-    background: $mint;
+.logo {
+    font-family: $logo;
+    font-size: 3rem;
+    text-align: center;
+    background: white;
+    color: black;
+    padding: 10px;
+}
+
+.loc {
+    display: flex;
+    justify-content: center;
+    background: $darkgrey ;
+    padding: 15px 0;
+
+    &__icon {
+        margin-right: 20px;
+    }
+
+}
+
+////////////////////////////////  WHAT  //////////////////////////////////////// 
+
+.what {
+    background: $lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 30px 50px 10px 50px;
+    }
+
+    &__text {
+        text-align: center;
+        padding: 0px 50px 30px 50px;
+
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 50px 0px;
+    }
+
+    &__button {
+        padding: 13px 15px;
+        border-radius: 30px;
+        border: 0;
+        background: $linear;
+        color: white;
+        font-weight: 500;
+        letter-spacing: 1px;
+        box-shadow: $mediumshadow;
+
+        &:hover {
+            box-shadow: $darkshadow;
+            filter: brightness(110%);
+        }
+    }
+}
+
+////////////////////////////////  HOW  //////////////////////////////////////// 
+
+.how {
+
+    margin: 50px 20px 50px 20px;
+
+
+    &__element {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        background: $lightgrey;
+        box-shadow: $lightshadow;
+        border-radius: 20px;
+        padding: 25px 20px 25px 0;
+        margin-left: 14px;
+
+        &:hover {
+            background: lighten($primary, 35)
+        }
+
+        &:hover i {
+            color: $primary ;
+        }
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        padding: 12px;
+        color: white;
+        line-height: 20px;
+
+        background: $primary;
+        transform: translate(-50%);
+    }
+
+    &__icone {
+        font-size: 20px;
+        color: $darkgrey;
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+    &__text {
+        font-weight: 500;
+    }
+
+}
+
+////////////////////////////////  WHERE  //////////////////////////////////////// 
+
+.where {
+    background: $lightgrey;
+    padding-bottom: 60px;
+
+
+    &__title {
+        font-size: 2.5rem;
+        padding: 30px 50px 30px 20px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    &__card {
+
+        width: 340px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: $lightshadow;
+
+    }
+
+    &__image img {
+        display: block;
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 16px 16px 0 0;
+    }
+
+    &__new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 80px;
+        background: $tertiary;
+        color: darken($tertiary, 35);
+        font-weight: 500;
+        text-align: center;
+        border-radius: 2px;
+        padding: 5px 5px;
+        font-size: 1.4rem;
+
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        line-height: 25px;
+        padding: 15px;
+        border-radius: 0 0 16px 16px;
+
+
+    }
+
+    &__loc {
+        font-size: 1.8rem;
+    }
+
+
+    &__heart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        padding: 10px 10px 20px 0;
+
+    }
+
+}
+
+//////////////////////////////  FOOTER  //////////////////////////////////////// 
+
+footer {
+    background: $xtradarkgrey;
+    padding: 20px 0px 35px 20px;
+    line-height: 25px;
+
+    & .footerlogo {
+        font-family: $logo;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: white;
+        padding-bottom: 20px;
+
+
+    }
+
+    & .prop {
+        color: white;
+
+        & .proptext {
+            padding-left: 6px;
+        }
+    }
+
+    & .partners {
+        color: white;
+    }
+
+    & .legal {
+        color: white;
+    }
+
+    & .contact {
+        color: white
+    }
+
+    .contact:hover {
+        color: $primary
+    }
 }

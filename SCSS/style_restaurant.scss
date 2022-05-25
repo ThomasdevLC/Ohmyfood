@@ -1,0 +1,16 @@
+@import "./1_utils/variables";
+@import "./3_base/base";
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__direction {
+        color: rebeccapurple;
+    }
+
+    &__logo img {
+        width: 50%;
+    }
+}
