@@ -1,0 +1,13 @@
+/*  tablet to desktop */
+@mixin md {
+    @media (min-width: 768px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+/* Large desktop */
+@mixin xl {
+    @media (min-width: 993px) {
+        @content;
+    }
+}

@@ -1,0 +1,46 @@
+@keyframes fade {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-top-color: $primary;
+        border-bottom-color: $primary;
+    }
+
+    25% {
+        transform: rotate(360deg) scale(1.15);
+        border-top-color: $secondary;
+        border-bottom-color: $secondary;
+    }
+
+    50% {
+        transform: rotate(720deg) scale(1);
+        border-top-color: $tertiary;
+        border-bottom-color: $tertiary;
+    }
+
+    75% {
+        opacity: 0;
+        transform: rotate(360deg) scale(1.15);
+        border-top-color: $tertiary;
+        border-bottom-color: $tertiary;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%)
+    }
+
+}

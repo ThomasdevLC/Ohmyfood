@@ -1,16 +1,303 @@
 @import "./1_utils/variables";
+@import "./1_utils/keyframes";
+@import "./1_utils/mediaqueries";
 @import "./3_base/base";
 
+////////////////////////////// HEADER  //////////////////////////////////////// 
+
 .header {
+
+    padding: 20px 20px 15px 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+
 
     &__direction {
-        color: rebeccapurple;
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        font-size: 20px;
+
+        & a {
+            color: black;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
     }
 
     &__logo img {
-        width: 50%;
+        width: 200px;
+    }
+
+    &__logo {
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+//////////////////////////////  IMAGE  //////////////////////////////////////// 
+
+.pic img {
+
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+}
+
+////////////////////////////// MENU  //////////////////////////////////////// 
+
+
+.menu {
+    background: $lightgrey;
+    border-radius: 30px 30px 0 0;
+    width: 100%;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+
+    &__title {
+        font-family: $logo;
+        font-size: 1.4rem;
+        display: flex;
+        padding: 20px 0 20px 20px;
+
+        @include md {
+            width: 480px;
+            margin: auto;
+            padding: 20px 0 20px 0px;
+
+        }
+
+
+        @include xl {
+            width: 1440px;
+            margin: auto;
+            padding: 20px 0 20px 0px;
+        }
+    }
+
+    &__heart {
+        font-size: 2.5rem;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+    }
+
+    &__container {
+        margin: 0 20px 0 20px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 40px 0px;
+        grid-template-areas:
+            "starter"
+            "main"
+            "dessert";
+
+        @include xl {
+            width: 1440px;
+            margin: auto;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 0px 40px;
+
+        }
+
+        @include md {
+            width: 480px;
+            margin: auto;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
+
+    &__course {
+        font-size: 1.8rem;
+        font-weight: 400;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 40px;
+            padding-top: 5px;
+            border-bottom: 3px solid $tertiary;
+        }
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        background: white;
+        box-shadow: $lightshadow;
+        border-radius: 10px;
+        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+
+    }
+
+    &__meal {
+        padding: 10px;
+        line-height: 2.3rem;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    &__side {
+        font-size: 1.4rem;
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+
+    &__slide {
+        width: 30px;
+        height: 100%;
+        background: $tertiary;
+        border-radius: 0 10px 10px 0;
+
+    }
+}
+
+////////////////////////////// ORDER  //////////////////////////////////////// 
+
+.order {
+    background: $lightgrey;
+    padding: 50px 0px;
+
+
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        // padding: 0px 0px 50px 0px;
+    }
+
+    &__button {
+        padding: 13px 40px;
+        border-radius: 30px;
+        border: 0;
+        background: $linear;
+        color: white;
+        font-weight: 400;
+        letter-spacing: 1px;
+        box-shadow: $mediumshadow;
+
+        &:hover {
+            box-shadow: $darkshadow;
+            filter: brightness(110%);
+            cursor: pointer;
+        }
+    }
+}
+
+//////////////////////////////  FOOTER  //////////////////////////////////////// 
+
+.footer {
+    background: $xtradarkgrey;
+    color: white;
+    padding: 20px 0px 60px 20px;
+    line-height: 25px;
+    font-weight: 300;
+
+
+
+    @include md {
+        padding: 30px;
+    }
+
+    @include xl {
+        padding: 30px;
+    }
+
+
+
+    &__logo {
+        @include md {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        @include xl {
+            display: flex;
+            justify-content: center;
+        }
+
+
+    }
+
+    &__container {
+
+        a:hover {
+
+            border-bottom: 2px lighten($primary, 15) solid;
+            padding-bottom: 2px;
+        }
+
+        @include md {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+        }
+
+
+        @include xl {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 25px;
+        }
+    }
+
+
+    &__logo {
+        font-family: $logo;
+        font-size: 1.8rem;
+        font-weight: 300;
+        padding-bottom: 20px;
+
+        @include md {
+            font-size: 2.2rem;
+        }
+
+        @include xl {
+            font-size: 2.2rem;
+        }
+
+    }
+
+    &__proptext {
+        padding-left: 6px;
     }
 }
