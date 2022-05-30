@@ -1,13 +1,16 @@
 @import "./1_utils/variables";
 @import "./3_base/base";
 
+
+
+/* TechReview : Il y aurait surement moyen de déplacer le logo dans un header.scss et le footer dans un footer.scss que tu importes. Puis le css de ta page index dans un index.scss  */
 .logo {
     font-family: $logo;
-    font-size: 3rem;
+    font-size: 3rem; /* TechReview : je préconise plutôt le PT pour les font-size*/
     text-align: center;
     background: white;
     color: black;
-    padding: 10px;
+    padding: 10px; /* TechReview : et le REM pour le reste : ça permet d'avoir un responsive relative au texte, ce qui améliore le rendu  https://connect.adfab.fr/dev/dev-front/unite-de-mesure-css-rem . Mais il faut éviter d'utiliser trop d'unité différente. PT + REM + % suffit souvent largement, introduire trop d'unité complexifie*/
 }
 
 .loc {
@@ -58,7 +61,7 @@
         letter-spacing: 1px;
         box-shadow: $mediumshadow;
 
-        &:hover {
+        &:hover { /* TechReview: Top ton utilisation des imbrications avec le BEM (y) */
             box-shadow: $darkshadow;
             filter: brightness(110%);
         }
