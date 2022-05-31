@@ -5,42 +5,36 @@
 
 ////////////////////////////// LOADER  //////////////////////////////////////// 
 
-.loader {
-    background-color: white;
-    opacity: 80%;
-    position: fixed;
-    display: grid;
-    place-items: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 9;
-    animation: load 0.1s;
-    animation-delay: 6s;
-    animation-fill-mode: forwards;
+// .loader {
+//     background-color: white;
+//     opacity: 80%;
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 100vh;
+//     z-index: 9;
+//     display: grid;
+//     place-items: center;
+//     animation: load 0.1s;
+//     animation-delay: 3s;
+//     animation-fill-mode: forwards;
 
 
+//     &__item {
+//         border: 14px solid #bdc3c7;
+//         width: 90px;
+//         height: 90px;
+//         border-top-color: $primary;
+//         border-bottom-color: $secondary;
+//         border-radius: 50%;
+//         animation: spinner 3s linear;
+//         animation-fill-mode: forwards;
+//         animation-iteration-count: 2;
 
-    &__item {
-        border: 14px solid #bdc3c7;
-        width: 90px;
-        height: 90px;
-        border-top-color: $primary;
-        border-bottom-color: $secondary;
-        border-radius: 50%;
-        animation: spinner 6s linear;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 2;
-
-
-    }
-
-}
-
-
-
+//     }
+// }
 
 
 
@@ -125,9 +119,7 @@
 ////////////////////////////////  HOW  //////////////////////////////////////// 
 
 .how {
-
     margin: 50px 20px 50px 20px;
-
 
 
     @include xl {
@@ -230,13 +222,11 @@
         font-size: 2.5rem;
         padding: 30px 50px 30px 20px;
 
-
         @include xl {
             width: 1440px;
             padding-left: 80px;
             margin: auto;
         }
-
     }
 
     &__container {
@@ -271,7 +261,6 @@
         border-radius: 20px;
         position: relative;
         box-shadow: $lightshadow;
-        overflow: hidden;
 
         @include xl {
             width: 500px;
@@ -279,19 +268,11 @@
     }
 
     &__image img {
-        overflow: hidden;
-
         display: block;
         width: 100%;
         height: 190px;
         object-fit: cover;
         border-radius: 16px 16px 0 0;
-        transition: transform 1s;
-
-
-        &:hover {
-            transform: scale(1.03);
-        }
     }
 
     &__new {
@@ -327,22 +308,13 @@
 
 
     &__heart {
-
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 25px;
         padding: 10px 10px 20px 0;
+        font-size: 25px;
 
-    }
 
-
-    .fa-regular {
-        -webkit-background-clip: text;
-
-        &:hover {
-            opacity: 0;
-        }
 
     }
 
@@ -359,15 +331,7 @@
             transform: scale(1.07);
 
         }
-
-
-
-
     }
-
-
-
-
 
 }
 
@@ -401,7 +365,6 @@
             display: flex;
             justify-content: center;
         }
-
 
     }
 

@@ -147,6 +147,12 @@ a {
   gap: 40px 0px;
   grid-template-areas: "starter" "main" "dessert";
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu__container {
+    width: 480px;
+    margin: auto;
+  }
+}
 @media (min-width: 993px) {
   .menu__container {
     width: 1440px;
@@ -154,12 +160,6 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 40px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .menu__container {
-    width: 480px;
-    margin: auto;
   }
 }
 .menu__block {
@@ -185,7 +185,18 @@ a {
   background: white;
   box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
+}
+.menu__one {
   animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 0s;
+}
+.menu__two {
+  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 0.5s;
+}
+.menu__three {
+  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1s;
 }
 .menu__meal {
   padding: 10px;

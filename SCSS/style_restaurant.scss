@@ -105,6 +105,12 @@
             "main"
             "dessert";
 
+
+        @include md {
+            width: 480px;
+            margin: auto;
+        }
+
         @include xl {
             width: 1440px;
             margin: auto;
@@ -115,10 +121,7 @@
 
         }
 
-        @include md {
-            width: 480px;
-            margin: auto;
-        }
+
     }
 
     &__block {
@@ -147,9 +150,22 @@
         background: white;
         box-shadow: $lightshadow;
         border-radius: 10px;
+
+    }
+
+    &__one {
         animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation-delay: 0s;
+    }
 
+    &__two {
+        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation-delay: 0.5s;
+    }
 
+    &__three {
+        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation-delay: 1s;
     }
 
     &__meal {
