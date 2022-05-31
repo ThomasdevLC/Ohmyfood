@@ -5,23 +5,41 @@
 
 ////////////////////////////// LOADER  //////////////////////////////////////// 
 
-
-
 .loader {
-    margin: auto;
-    border: 14px solid #bdc3c7;
-    width: 90px;
-    height: 90px;
-    border-top-color: $primary;
-    border-bottom-color: $secondary;
-    border-radius: 50%;
-    animation: spinner 6s linear;
+    background-color: white;
+    opacity: 80%;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 9;
+    animation: load 0.1s;
+    animation-delay: 6s;
     animation-fill-mode: forwards;
-    position: absolute;
-    bottom: 45vh;
-    left: 47vw;
-    z-index: 3;
+
+
+
+    &__item {
+        border: 14px solid #bdc3c7;
+        width: 90px;
+        height: 90px;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        border-radius: 50%;
+        animation: spinner 6s linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 2;
+
+
+    }
+
 }
+
+
 
 
 

@@ -1,11 +1,10 @@
-@keyframes fade {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
+@keyframes load {
+  from {
+    transform: scale(1);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: scale(0);
+    opacity: 0;
   }
 }
 @keyframes spinner {
@@ -20,19 +19,29 @@
     border-bottom-color: #FF79DA;
   }
   50% {
-    transform: rotate(720deg) scale(1);
+    transform: rotate(0deg) scale(1);
     border-top-color: #99E2D0;
     border-bottom-color: #99E2D0;
   }
   75% {
-    opacity: 0;
     transform: rotate(360deg) scale(1.15);
     border-top-color: #99E2D0;
     border-bottom-color: #99E2D0;
   }
   100% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: translateY(30px);
     opacity: 0;
-    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 /*  tablet to desktop */
@@ -62,7 +71,22 @@ a {
 }
 
 .loader {
-  margin: auto;
+  background-color: white;
+  opacity: 80%;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 9;
+  animation: load 0.1s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+.loader__item {
   border: 14px solid #bdc3c7;
   width: 90px;
   height: 90px;
@@ -71,10 +95,7 @@ a {
   border-radius: 50%;
   animation: spinner 6s linear;
   animation-fill-mode: forwards;
-  position: absolute;
-  bottom: 45vh;
-  left: 47vw;
-  z-index: 3;
+  animation-iteration-count: 2;
 }
 
 .header__logo {

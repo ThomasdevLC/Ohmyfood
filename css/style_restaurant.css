@@ -1,11 +1,10 @@
-@keyframes fade {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
+@keyframes load {
+  from {
+    transform: scale(1);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: scale(0);
+    opacity: 0;
   }
 }
 @keyframes spinner {
@@ -20,19 +19,29 @@
     border-bottom-color: #FF79DA;
   }
   50% {
-    transform: rotate(720deg) scale(1);
+    transform: rotate(0deg) scale(1);
     border-top-color: #99E2D0;
     border-bottom-color: #99E2D0;
   }
   75% {
-    opacity: 0;
     transform: rotate(360deg) scale(1.15);
     border-top-color: #99E2D0;
     border-bottom-color: #99E2D0;
   }
   100% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: translateY(30px);
     opacity: 0;
-    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 /*  tablet to desktop */
