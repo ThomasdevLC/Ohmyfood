@@ -70,6 +70,7 @@
     display: flex;
     justify-content: center;
     background: $darkgrey ;
+    box-shadow: 0px 10px 9px -12px $xtradarkgrey inset;
     padding: 15px 0;
 
     &__icon {
