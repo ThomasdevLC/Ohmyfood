@@ -70,9 +70,12 @@
         padding: 20px 0 20px 20px;
 
         @include md {
-            width: 480px;
+
+            display: flex;
+            justify-content: center;
             margin: auto;
             padding: 20px 0 20px 0px;
+            width: 480px;
 
         }
 
@@ -132,10 +135,7 @@
             "dessert";
 
 
-        @include md {
-            width: 480px;
-            margin: auto;
-        }
+
 
         @include xl {
             width: 1440px;
@@ -154,8 +154,11 @@
     &__block {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         row-gap: 10px;
+
+        @include md {
+            margin: auto;
+        }
     }
 
 
@@ -244,6 +247,11 @@
     &__three {
         animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation-delay: 1s;
+    }
+
+    &__four {
+        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation-delay: 1.5s;
     }
 
     &__meal {

@@ -135,9 +135,11 @@ a {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .menu__title {
-    width: 480px;
+    display: flex;
+    justify-content: center;
     margin: auto;
     padding: 20px 0 20px 0px;
+    width: 480px;
   }
 }
 @media (min-width: 993px) {
@@ -182,12 +184,6 @@ a {
   gap: 40px 0px;
   grid-template-areas: "starter" "main" "dessert";
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .menu__container {
-    width: 480px;
-    margin: auto;
-  }
-}
 @media (min-width: 993px) {
   .menu__container {
     width: 1440px;
@@ -201,8 +197,12 @@ a {
 .menu__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   row-gap: 10px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu__block {
+    margin: auto;
+  }
 }
 .menu__course {
   font-size: 1.8rem;
@@ -271,6 +271,10 @@ a {
 .menu__three {
   animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation-delay: 1s;
+}
+.menu__four {
+  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 1.5s;
 }
 .menu__meal {
   padding: 10px;
