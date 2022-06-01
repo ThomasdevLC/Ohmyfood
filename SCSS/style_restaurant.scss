@@ -91,7 +91,33 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 50px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--full {
+            display: none;
+        }
+
+        &:hover &--full {
+
+            display: inline;
+            color: transparent;
+            background: $linear;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        &--empty {
+            display: inline;
+        }
+
+        &:hover &--empty {
+            display: none;
+        }
     }
+
 
     &__container {
         margin: 0 20px 0 20px;
@@ -121,8 +147,8 @@
 
         }
 
-
     }
+
 
     &__block {
         display: flex;
@@ -130,6 +156,7 @@
         justify-content: space-around;
         row-gap: 10px;
     }
+
 
     &__course {
         font-size: 1.8rem;
@@ -144,14 +171,54 @@
         }
     }
 
+
     &__card {
         display: flex;
         justify-content: space-between;
         background: white;
         box-shadow: $lightshadow;
         border-radius: 10px;
+        width: 350px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+    &__slide {
+        transform-origin: right;
+        display: none;
+        transform: scale(0);
+        width: 70px;
+        background-color: $tertiary;
+        border-radius: 0 10px 10px 0;
 
     }
+
+    &__card:hover &__slide {
+        display: inline;
+        transform: scale(1);
+        // animation: sliderfx 1s;
+
+
+    }
+
+    &__checkbox {
+        display: grid;
+        place-items: center;
+        padding-top: 2.2rem;
+    }
+
+    &__check {
+        color: white;
+        display: block;
+        font-size: 2.2rem;
+        animation: spincheck .6s;
+        animation-fill-mode: forwards;
+
+    }
+
 
     &__one {
         animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -171,15 +238,29 @@
     &__meal {
         padding: 10px;
         line-height: 2.3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &__name {
         font-weight: 500;
         font-size: 1.8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+
     }
 
     &__side {
         font-size: 1.4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+
+
     }
 
     &__box {
@@ -192,16 +273,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 10px;
+        padding: 13px;
     }
 
-    &__slide {
-        width: 30px;
-        height: 100%;
-        background: $tertiary;
-        border-radius: 0 10px 10px 0;
 
-    }
 }
 
 ////////////////////////////// ORDER  //////////////////////////////////////// 

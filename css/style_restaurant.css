@@ -44,6 +44,22 @@
     opacity: 1;
   }
 }
+@keyframes spincheck {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(-240deg);
+  }
+}
+@keyframes sliderfx {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*  tablet to desktop */
 /* Large desktop */
 * {
@@ -139,6 +155,25 @@ a {
   justify-content: center;
   padding-left: 50px;
 }
+.menu__heart:hover {
+  cursor: pointer;
+}
+.menu__heart--full {
+  display: none;
+}
+.menu__heart:hover .menu__heart--full {
+  display: inline;
+  color: transparent;
+  background: linear-gradient(#de64f1, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menu__heart--empty {
+  display: inline;
+}
+.menu__heart:hover .menu__heart--empty {
+  display: none;
+}
 .menu__container {
   margin: 0 20px 0 20px;
   display: grid;
@@ -185,6 +220,34 @@ a {
   background: white;
   box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
+  width: 350px;
+}
+.menu__card:hover {
+  cursor: pointer;
+}
+.menu__slide {
+  transform-origin: right;
+  display: none;
+  transform: scale(0);
+  width: 70px;
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+}
+.menu__card:hover .menu__slide {
+  display: inline;
+  transform: scale(1);
+}
+.menu__checkbox {
+  display: grid;
+  place-items: center;
+  padding-top: 2.2rem;
+}
+.menu__check {
+  color: white;
+  display: block;
+  font-size: 2.2rem;
+  animation: spincheck 0.6s;
+  animation-fill-mode: forwards;
 }
 .menu__one {
   animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -201,13 +264,22 @@ a {
 .menu__meal {
   padding: 10px;
   line-height: 2.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__name {
   font-weight: 500;
   font-size: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__side {
   font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__box {
   display: flex;
@@ -218,13 +290,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 10px;
-}
-.menu__slide {
-  width: 30px;
-  height: 100%;
-  background: #99E2D0;
-  border-radius: 0 10px 10px 0;
+  padding: 13px;
 }
 
 .order {
@@ -239,7 +305,7 @@ a {
   padding: 13px 40px;
   border-radius: 30px;
   border: 0;
-  background: linear-gradient(345deg, #9356dc, #de64f1);
+  background: linear-gradient(#de64f1, #9356dc);
   color: white;
   font-weight: 400;
   letter-spacing: 1px;

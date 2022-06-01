@@ -5,36 +5,44 @@
 
 ////////////////////////////// LOADER  //////////////////////////////////////// 
 
-// .loader {
-//     background-color: white;
-//     opacity: 80%;
-//     position: fixed;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     height: 100vh;
-//     z-index: 9;
-//     display: grid;
-//     place-items: center;
-//     animation: load 0.1s;
-//     animation-delay: 3s;
-//     animation-fill-mode: forwards;
+.loader {
+    background-color: white;
+    opacity: 80%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 9;
+    display: grid;
+    place-items: center;
+    animation: load 0.1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
 
 
-//     &__item {
-//         border: 14px solid #bdc3c7;
-//         width: 90px;
-//         height: 90px;
-//         border-top-color: $primary;
-//         border-bottom-color: $secondary;
-//         border-radius: 50%;
-//         animation: spinner 3s linear;
-//         animation-fill-mode: forwards;
-//         animation-iteration-count: 2;
 
-//     }
-// }
+
+    &__item {
+        border: 12px solid $lightgrey;
+        width: 60px;
+        height: 60px;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        border-radius: 50%;
+        animation: spinner 3s linear;
+        animation-fill-mode: forwards;
+
+        @include xl {
+
+            border: 14px solid $lightgrey;
+            width: 90px;
+            height: 90px;
+        }
+
+    }
+}
 
 
 
@@ -58,7 +66,7 @@
 ////////////////////////////// LOCATION  //////////////////////////////////////// 
 
 
-.loc {
+.location {
     display: flex;
     justify-content: center;
     background: $darkgrey ;
@@ -161,7 +169,9 @@
 
         &:hover {
             background: lighten($primary, 35);
+            box-shadow: $mediumshadow;
             cursor: pointer;
+
         }
 
         &:hover i {
@@ -262,6 +272,11 @@
         position: relative;
         box-shadow: $lightshadow;
 
+        &:hover {
+            box-shadow: $mediumshadow;
+            filter: brightness(103%);
+        }
+
         @include xl {
             width: 500px;
         }
@@ -298,7 +313,6 @@
         line-height: 25px;
         padding: 15px;
         border-radius: 0 0 16px 16px;
-
     }
 
     &__loc {
@@ -311,25 +325,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 10px 20px 0;
+        margin: 10px 10px 20px 0;
         font-size: 25px;
 
+        &--full {
+            display: none;
+        }
 
+        &:hover &--full {
 
-    }
+            display: inline;
+            color: transparent;
+            background: $linear;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
 
+        &--empty {
+            display: inline;
+        }
 
-    .fa-solid {
-        color: transparent;
-        background: linear-gradient(#9356dc, #de64f1);
-        -webkit-background-clip: text;
-        opacity: 0;
-
-        &:hover {
-
-            opacity: 1;
-            transform: scale(1.07);
-
+        &:hover &--empty {
+            display: none;
         }
     }
 
