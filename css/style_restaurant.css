@@ -192,6 +192,7 @@ a {
   .menu__container {
     width: 1440px;
     margin: auto;
+    grid-auto-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 40px;
@@ -222,6 +223,16 @@ a {
   border-radius: 10px;
   width: 350px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .menu__card {
+    width: 390px;
+  }
+}
+@media (min-width: 993px) {
+  .menu__card {
+    width: 400px;
+  }
+}
 .menu__card:hover {
   cursor: pointer;
 }
@@ -246,7 +257,7 @@ a {
   color: white;
   display: block;
   font-size: 2.2rem;
-  animation: spincheck 0.6s;
+  animation: spincheck 0.8s;
   animation-fill-mode: forwards;
 }
 .menu__one {

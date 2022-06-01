@@ -140,6 +140,7 @@
         @include xl {
             width: 1440px;
             margin: auto;
+            grid-auto-rows: auto;
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr;
@@ -180,9 +181,19 @@
         border-radius: 10px;
         width: 350px;
 
+        @include md {
+            width: 390px;
+        }
+
+        @include xl {
+            width: 400px;
+        }
+
         &:hover {
             cursor: pointer;
         }
+
+
     }
 
 
@@ -214,7 +225,7 @@
         color: white;
         display: block;
         font-size: 2.2rem;
-        animation: spincheck .6s;
+        animation: spincheck .8s;
         animation-fill-mode: forwards;
 
     }
