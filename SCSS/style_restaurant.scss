@@ -27,7 +27,6 @@
                 color: $primary;
             }
         }
-
     }
 
     &__logo img {
@@ -54,7 +53,6 @@
 
 ////////////////////////////// MENU  //////////////////////////////////////// 
 
-
 .menu {
     background: $lightgrey;
     border-radius: 30px 30px 0 0;
@@ -76,7 +74,6 @@
             margin: auto;
             padding: 20px 0 20px 0px;
             width: 480px;
-
         }
 
 
@@ -190,8 +187,6 @@
         &:hover {
             cursor: pointer;
         }
-
-
     }
 
 
@@ -221,7 +216,6 @@
         font-size: 2.2rem;
         animation: spincheck .8s;
         animation-fill-mode: forwards;
-
     }
 
 
