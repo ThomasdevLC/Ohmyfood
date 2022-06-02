@@ -68,22 +68,10 @@
 
 @keyframes spincheck {
     0% {
-        transform: rotate(-280deg);
+        transform: rotate(-360deg);
     }
 
     100% {
         transform: rotate(0deg);
-    }
-}
-
-//////////////////////////// SLIDER  //////////////////////////////////////// 
-
-@keyframes sliderfx {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1);
     }
 }

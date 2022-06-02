@@ -46,18 +46,10 @@
 }
 @keyframes spincheck {
   0% {
-    transform: rotate(-280deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-@keyframes sliderfx {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 /*  tablet to desktop */
@@ -222,6 +214,7 @@ a {
   box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
   width: 350px;
+  overflow: hidden;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .menu__card {
@@ -237,16 +230,14 @@ a {
   cursor: pointer;
 }
 .menu__slide {
-  transform-origin: right;
-  display: none;
-  transform: scale(0);
   width: 70px;
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
+  margin-right: -70px;
+  transition: all 0.5s;
 }
 .menu__card:hover .menu__slide {
-  display: inline;
-  transform: scale(1);
+  margin: 0;
 }
 .menu__checkbox {
   display: grid;
@@ -257,7 +248,9 @@ a {
   color: white;
   display: block;
   font-size: 2.2rem;
-  animation: spincheck 0.8s;
+}
+.menu__card:hover .menu__check {
+  animation: spincheck 0.7s;
   animation-fill-mode: forwards;
 }
 .menu__one {

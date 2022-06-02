@@ -46,18 +46,10 @@
 }
 @keyframes spincheck {
   0% {
-    transform: rotate(-280deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-@keyframes sliderfx {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 /*  tablet to desktop */
@@ -133,7 +125,7 @@ a {
 .location {
   display: flex;
   justify-content: center;
-  background: #bdc3c7;
+  background: #DCE3E5;
   box-shadow: 0px 10px 9px -12px #2f3640 inset;
   padding: 15px 0;
 }
@@ -247,7 +239,7 @@ a {
 }
 .how__icone {
   font-size: 20px;
-  color: #bdc3c7;
+  color: #DCE3E5;
   margin-left: 10px;
   margin-right: 15px;
 }
