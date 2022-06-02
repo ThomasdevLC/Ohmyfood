@@ -3,6 +3,7 @@
 @import "./1_utils/mediaqueries";
 @import "./3_base/base";
 @import "./4_components/loader";
+@import "./5_layout/footer";
 
 ////////////////////////////// LOADER  //////////////////////////////////////// 
 
@@ -318,78 +319,4 @@
 
 //////////////////////////////  FOOTER  //////////////////////////////////////// 
 
-.footer {
-    background: $xtradarkgrey;
-    color: white;
-    padding: 20px 0px 60px 20px;
-    line-height: 25px;
-    font-weight: 300;
-
-    @include md {
-        padding: 30px;
-    }
-
-    @include xl {
-        padding: 30px;
-    }
-
-
-    &__logo {
-        @include md {
-            display: flex;
-            justify-content: center;
-        }
-
-
-        @include xl {
-            display: flex;
-            justify-content: center;
-        }
-
-    }
-
-    &__container {
-
-        a:hover {
-
-            border-bottom: 2px lighten($primary, 15) solid;
-            padding-bottom: 2px;
-        }
-
-        @include md {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 25px;
-        }
-
-
-        @include xl {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 25px;
-        }
-    }
-
-
-    &__logo {
-        font-family: $logo;
-        font-size: 1.8rem;
-        font-weight: 300;
-        padding-bottom: 20px;
-
-        @include md {
-            font-size: 2.2rem;
-        }
-
-        @include xl {
-            font-size: 2.2rem;
-        }
-
-    }
-
-    &__proptext {
-        padding-left: 6px;
-    }
-}
+@include footer_block;
