@@ -1,5 +1,6 @@
 @import "./1_utils/variables";
 @import "./1_utils/keyframes";
+@import "./1_utils/animations";
 @import "./1_utils/mediaqueries";
 @import "./3_base/base";
 
@@ -201,15 +202,11 @@
         width: 70px;
         background-color: $tertiary;
         border-radius: 0 10px 10px 0;
-
     }
 
     &__card:hover &__slide {
         display: inline;
         transform: scale(1);
-        // animation: sliderfx 1s;
-
-
     }
 
     &__checkbox {
@@ -228,25 +225,10 @@
     }
 
 
-    &__one {
-        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation-delay: 0s;
+    & {
+        @include fader;
     }
 
-    &__two {
-        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation-delay: 0.5s;
-    }
-
-    &__three {
-        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation-delay: 1s;
-    }
-
-    &__four {
-        animation: fade 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation-delay: 1.5s;
-    }
 
     &__meal {
         padding: 10px;
@@ -288,6 +270,7 @@
         justify-content: flex-end;
         padding: 13px;
     }
+
 
 
 }

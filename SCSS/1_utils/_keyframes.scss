@@ -68,11 +68,11 @@
 
 @keyframes spincheck {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(-280deg);
     }
 
-    0% {
-        transform: rotate(-240deg);
+    100% {
+        transform: rotate(0deg);
     }
 }
 
