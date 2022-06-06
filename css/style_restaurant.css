@@ -52,6 +52,16 @@
     transform: rotate(0deg);
   }
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 /*  tablet to desktop */
 /* Large desktop */
 * {
@@ -108,7 +118,6 @@ a {
   height: 280px;
   width: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 
 .menu {
@@ -117,7 +126,6 @@ a {
   width: 100%;
   margin-top: -60px;
   position: relative;
-  z-index: 2;
 }
 .menu__title {
   font-family: "Shrikhand", cursive;
@@ -161,6 +169,7 @@ a {
   background: linear-gradient(#de64f1, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
+  animation: appear 2s;
 }
 .menu__heart--empty {
   display: inline;
@@ -254,19 +263,19 @@ a {
   animation-fill-mode: forwards;
 }
 .menu__one {
-  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade 1s cubic-bezier(0.49, 0.575, 0.565, 1) both;
   animation-delay: 0s;
 }
 .menu__two {
-  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade 1s cubic-bezier(0.49, 0.575, 0.565, 1) both;
   animation-delay: 0.5s;
 }
 .menu__three {
-  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade 1s cubic-bezier(0.49, 0.575, 0.565, 1) both;
   animation-delay: 1s;
 }
 .menu__four {
-  animation: fade 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade 1s cubic-bezier(0.49, 0.575, 0.565, 1) both;
   animation-delay: 1.5s;
 }
 .menu__meal {

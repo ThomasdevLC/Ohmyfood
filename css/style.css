@@ -52,6 +52,16 @@
     transform: rotate(0deg);
   }
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 /*  tablet to desktop */
 /* Large desktop */
 * {
@@ -352,6 +362,7 @@ a {
   background: linear-gradient(#de64f1, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
+  animation: appear 2s;
 }
 .where__heart--empty {
   display: inline;

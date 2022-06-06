@@ -5,7 +5,7 @@
 @import "./4_components/loader";
 @import "./5_layout/footer";
 
-////////////////////////////// LOADER  //////////////////////////////////////// 
+////////////////////////////// LOimage.pngADER  //////////////////////////////////////// 
 
 @include spinloader;
 
@@ -136,7 +136,6 @@
             background: lighten($primary, 35);
             box-shadow: $mediumshadow;
             cursor: pointer;
-
         }
 
         &:hover i {
@@ -172,9 +171,7 @@
         font-size: 20px;
         color: $darkgrey;
         margin-left: 10px;
-
         margin-right: 15px;
-
 
     }
 
@@ -293,21 +290,23 @@
         margin: 10px 10px 20px 0;
         font-size: 25px;
 
+
         &--full {
             display: none;
         }
 
         &:hover &--full {
-
             display: inline;
             color: transparent;
             background: $linear;
             -webkit-background-clip: text;
             background-clip: text;
+            animation: appear 2s;
         }
 
         &--empty {
             display: inline;
+
         }
 
         &:hover &--empty {

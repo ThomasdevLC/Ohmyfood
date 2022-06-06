@@ -50,7 +50,6 @@
     height: 280px;
     width: 100%;
     object-fit: cover;
-    z-index: 1;
 }
 
 ////////////////////////////// MENU  //////////////////////////////////////// 
@@ -61,7 +60,6 @@
     width: 100%;
     margin-top: -60px;
     position: relative;
-    z-index: 2;
 
     &__title {
         font-family: $logo;
@@ -109,6 +107,8 @@
             background: $linear;
             -webkit-background-clip: text;
             background-clip: text;
+            animation: appear 2s;
+
         }
 
         &--empty {
