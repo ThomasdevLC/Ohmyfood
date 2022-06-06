@@ -184,7 +184,7 @@ a {
 }
 @media (min-width: 993px) {
   .how {
-    width: 1440px;
+    width: 75%;
     margin: 50px auto 50px auto;
   }
 }
@@ -267,7 +267,7 @@ a {
 }
 @media (min-width: 993px) {
   .where__title {
-    width: 1440px;
+    width: 75%;
     padding-left: 80px;
     margin: auto;
   }
@@ -290,7 +290,7 @@ a {
 }
 @media (min-width: 993px) {
   .where__container {
-    width: 1440px;
+    width: 75%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -307,7 +307,7 @@ a {
 }
 .where__card:hover {
   box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.3);
-  filter: brightness(103%);
+  filter: brightness(105%);
 }
 @media (min-width: 993px) {
   .where__card {

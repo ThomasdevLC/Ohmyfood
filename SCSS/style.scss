@@ -5,7 +5,7 @@
 @import "./4_components/loader";
 @import "./5_layout/footer";
 
-////////////////////////////// LOimage.pngADER  //////////////////////////////////////// 
+////////////////////////////// LOADER  //////////////////////////////////////// 
 
 @include spinloader;
 
@@ -96,7 +96,7 @@
 
 
     @include xl {
-        width: 1440px;
+        width: 75%;
         margin: 50px auto 50px auto;
     }
 
@@ -195,7 +195,7 @@
         padding: 30px 50px 30px 20px;
 
         @include xl {
-            width: 1440px;
+            width: 75%;
             padding-left: 80px;
             margin: auto;
         }
@@ -218,7 +218,7 @@
 
 
         @include xl {
-            width: 1440px;
+            width: 75%;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
@@ -236,7 +236,7 @@
 
         &:hover {
             box-shadow: $mediumshadow;
-            filter: brightness(103%);
+            filter: brightness(105%);
         }
 
         @include xl {
@@ -264,7 +264,6 @@
         border-radius: 2px;
         padding: 5px 5px;
         font-size: 1.4rem;
-
     }
 
     &__text {
