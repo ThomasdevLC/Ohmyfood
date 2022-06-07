@@ -15,7 +15,6 @@
     justify-content: center;
 
 
-
     &__direction {
         position: absolute;
         top: 25px;
@@ -57,30 +56,24 @@
 .menu {
     background: $lightgrey;
     border-radius: 30px 30px 0 0;
-    width: 100%;
     margin-top: -60px;
     position: relative;
+    display: grid;
+    place-content: center;
 
     &__title {
         font-family: $logo;
         font-size: 1.4rem;
         display: flex;
-        padding: 20px 0 20px 20px;
+        justify-content: space-between;
+        padding: 20px 0 20px 0px;
 
         @include md {
-
-            display: flex;
             justify-content: center;
-            margin: auto;
-            padding: 20px 0 20px 0px;
-            width: 480px;
         }
 
-
         @include xl {
-            width: 1440px;
             margin: auto;
-            padding: 20px 0 20px 0px;
         }
     }
 
@@ -90,7 +83,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 50px;
+        margin-left: 20px;
 
         &:hover {
             cursor: pointer;
@@ -122,25 +115,17 @@
 
 
     &__container {
-        margin: 0 20px 0 20px;
-
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 40px 0px;
-        grid-template-areas:
-            "starter"
-            "main"
-            "dessert";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 40px;
 
         @include xl {
-            width: 1440px;
-            margin: auto;
-            grid-auto-rows: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 40px;
 
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            gap: 0px 40px;
         }
     }
 
@@ -199,16 +184,13 @@
         background-color: $tertiary;
         border-radius: 0 10px 10px 0;
         margin-right: -70px;
-        transition: all .5s;
-        // transform-origin: right;
-        // display: none;
-        // transform: scale(0);
+        transition: .5s;
+
     }
 
     &__card:hover &__slide {
         margin: 0;
-        // display: inline;
-        // transform: scale(1);
+
     }
 
     &__checkbox {
@@ -225,7 +207,7 @@
     }
 
     &__card:hover &__check {
-        animation: spincheck .7s;
+        animation: spincheck 1s;
         animation-fill-mode: forwards;
     }
 
@@ -278,12 +260,9 @@
     background: $lightgrey;
     padding: 50px 0px;
 
-
-
     &__btn {
         display: flex;
         justify-content: center;
-        // padding: 0px 0px 50px 0px;
     }
 
     &__button {
