@@ -225,6 +225,7 @@
             flex-direction: row;
             justify-content: space-evenly;
             row-gap: 40px;
+            column-gap: 20px;
         }
     }
 
@@ -278,7 +279,6 @@
 
     &__loc {
         font-size: 1.8rem;
-
     }
 
 
@@ -300,12 +300,11 @@
             background: $linear;
             -webkit-background-clip: text;
             background-clip: text;
-            animation: appear 2s;
+            animation: appear .7s;
         }
 
         &--empty {
             display: inline;
-
         }
 
         &:hover &--empty {

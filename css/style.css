@@ -55,11 +55,15 @@
 @keyframes appear {
   0% {
     opacity: 0;
-    transform: translateY(3px);
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: scale(1);
   }
 }
 /*  tablet to desktop */
@@ -171,10 +175,10 @@ a {
   color: white;
   font-weight: 400;
   letter-spacing: 0.5px;
-  box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 9px 20px -10px rgba(0, 0, 0, 0.3);
 }
 .what__button:hover {
-  box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 9px 9px 20px -10px rgba(0, 0, 0, 0.4);
   filter: brightness(110%);
   cursor: pointer;
 }
@@ -211,14 +215,14 @@ a {
   display: flex;
   align-items: center;
   background: #ecf0f1;
-  box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.18);
+  box-shadow: 9px 9px 20px -10px rgba(0, 0, 0, 0.18);
   border-radius: 20px;
   padding: 25px 20px 25px 0;
   margin-left: 14px;
 }
 .how__element:hover {
   background: #f2eafb;
-  box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 9px 20px -10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .how__element:hover i {
@@ -297,16 +301,17 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     row-gap: 40px;
+    column-gap: 20px;
   }
 }
 .where__card {
   width: 340px;
   border-radius: 20px;
   position: relative;
-  box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.18);
+  box-shadow: 9px 9px 20px -10px rgba(0, 0, 0, 0.18);
 }
 .where__card:hover {
-  box-shadow: 9px 9px 32px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 9px 20px -10px rgba(0, 0, 0, 0.3);
   filter: brightness(105%);
 }
 @media (min-width: 993px) {
@@ -362,7 +367,7 @@ a {
   background: linear-gradient(#de64f1, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: appear 2s;
+  animation: appear 0.7s;
 }
 .where__heart--empty {
   display: inline;
